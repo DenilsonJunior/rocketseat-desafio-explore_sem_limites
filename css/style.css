@@ -1,0 +1,277 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-family: 'Mulish', sans-serif;
+    font-size: 62.5%;
+
+    --max: 144rem;
+
+    --colorWhite: #fff;
+    --color01: #B52184;
+    --color02: #312D64;
+    --color03: #F9F4FB;
+    --color04: linear-gradient(96.21deg, #343193 0%, #302C63 99.68%);
+
+    --size01: 3.2rem;
+    --size01d: 5.8rem;
+    --size02: 3rem;
+    --size02b: 3.5rem;
+    --size03: 2rem;
+    --size03d: 3.2rem;
+    --size04: 1.6rem;
+
+    --fontWeight01: 900;
+    --fontWeight02: 600;
+}
+
+body {
+    background-color: var(--color03);
+}
+
+/* comum */
+h1 {
+    font-size: var(--size01);
+    font-weight: var(--fontWeight01);
+    color: var(--color01);
+    line-height: 4rem;
+}
+h2 {
+    font-size: var(--size02);
+    color: var(--color01);
+    margin: 2rem 0 0;
+}
+@media only screen and (min-width: 800px) {
+    h1 {
+        font-size: var(--size01d);
+        line-height: 7.3rem;
+    }
+    h2 {
+        font-size: var(--size02b);
+        color: var(--color01);
+        margin: 2rem 0 0;
+    }
+}
+
+.maxView {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.bg-gradient {
+    background-image: var(--color04);
+}
+
+/* header */
+header {
+    max-width: var(--max);
+    width: 100%;
+}
+
+header .astronaut {
+    width: 100%;
+    padding: 0 3.2rem;
+}
+
+header div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.7rem;
+}
+
+header div p {
+    font-size: var(--size03);
+    font-weight: var(--fontWeight02);
+    color: var(--color02);
+    line-height: 2.5rem;
+    margin: 0rem;
+}
+
+header div .boxMause {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header div .boxMause .mause {
+    width: 3.8rem;
+    margin: 10rem auto 8rem;
+    padding: 0;
+    /* animation-delay: 3s; */
+    /* opacity: 0; */
+}
+
+/* main */
+main {
+    max-width: var(--max);
+    padding: 5.2rem 3.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+main .card {
+    width: 100%;
+    background-color: var(--colorWhite);
+    border-radius: 2rem;
+    padding: 2.6rem;
+}
+
+main .card img {
+    width: 8rem;
+}
+
+main .card h2 {
+    margin: 2rem 0 0;
+}
+
+main .card p {
+    font-size: var(--size04);
+    margin: 1.5rem 0 0;
+    line-height: 2rem;
+}   
+
+/* section */
+section {
+    width: 100%;
+    max-width: var(--max);
+    padding: 7.2rem 3.2rem;
+}
+
+section form {
+    margin: 4rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+section form .input-wrapper, textarea {
+    width: 100%;
+    background-color: var(--colorWhite);
+    border: .2rem solid var(--color02);
+    font-size: var(--size04);
+    border-radius: 1.4rem;
+    padding: 1.6rem;
+    color: var(--color02);
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+section form .input-wrapper i {
+    font-size: 2.5rem;
+}
+
+section form input {
+    width: 100%;
+    border: none;
+    background-color: var(--colorWhite);
+    font-size: var(--size04);
+    color: var(--color02);
+    padding: .5rem 0;
+    font-family: var();
+    font-family: 'Mulish', sans-serif;
+}
+
+section form textarea {
+    min-height: 15rem;
+    border-radius: 1.6rem;
+    font-family: 'Mulish', sans-serif;
+}
+
+section form .enviar {
+    width: fit-content;
+    background-image: var(--color04);
+    color: var(--colorWhite);
+    padding: 1.6rem;
+    border: none;
+    border-radius: 1.6rem;
+}
+
+section .detal {
+    display: none;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    background-image: var(--color04);
+    padding: 3.2rem;
+}
+
+footer p {
+    font-size: var(--size04);
+    color: var(--colorWhite);
+    text-align: center;
+}
+
+@media only screen and (min-width: 800px) {
+    main {
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 6.5rem 3.2rem;
+    }
+    main .card {
+        width: 40%;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0 11rem 0;
+        position: relative;
+    }
+    header .astronaut {
+        width: 72rem;
+        position: absolute;
+        right: 0;
+    }
+    header div {
+        margin: 0;
+        padding: 31.5rem 0 13.5rem;
+        align-items: flex-start;
+    }
+    header div p {
+        font-size: var(--size03d);
+        margin: 1.2rem 0 0;
+    }
+    header div .boxMause .mause {
+        width: 4.8rem;
+        position: relative;
+        margin: 18rem 0 0;
+    }
+    main {
+        padding: 6.5rem 11rem;
+    }
+    main .card {
+        width: 30%;
+    }
+    section form {
+        margin: 0 0 0 11rem;
+        max-width: 40%;
+        width: 50rem;
+    }
+    section .detal {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .wow {
+        animation: none !important;
+    }
+}  
